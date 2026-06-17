@@ -140,6 +140,14 @@ left off.
 
 ---
 
+## Changelog
+
+Version history is tracked in [CHANGELOG.md](CHANGELOG.md), following
+[Keep a Changelog](https://keepachangelog.com) and [SemVer](https://semver.org).
+Latest: **v0.1.0**.
+
+---
+
 ## License
 
 Released under the [MIT License](LICENSE) — © 2026 Saido Labs LLC. Free to use, modify,
