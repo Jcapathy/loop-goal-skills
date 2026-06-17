@@ -1,0 +1,3 @@
+# Python bytecode cache (from running loop/scripts/loop_init.py)
+__pycache__/
+*.pyc

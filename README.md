@@ -116,5 +116,5 @@ left off.
 
 ## License
 
-© Saido Labs LLC. All rights reserved. (Add an explicit license file if you intend to
-permit reuse.)
+Released under the [MIT License](LICENSE) — © 2026 Saido Labs LLC. Free to use, modify,
+and redistribute with attribution.
