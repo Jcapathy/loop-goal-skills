@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "loop-goal-skills"
+version = "0.1.0"
+description = "Loop + Goal Agent Skills by Saido Labs: a Plan-Build-Test-Reflect-Improve project cadence (/loop) and an objective-mode driver (/goal) with persistent .md state."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Saido Labs LLC" }]
+keywords = ["claude", "claude-code", "agent-skills", "cowork", "anthropic", "automation"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Jcapathy/loop-goal-skills"
+Repository = "https://github.com/Jcapathy/loop-goal-skills"
+
+[project.scripts]
+loop-skills = "loop_goal_skills.cli:main"
+loop-init = "loop_goal_skills.cli:init_main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["loop_goal_skills"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"loop" = "loop_goal_skills/_skills/loop"
+"goal" = "loop_goal_skills/_skills/goal"

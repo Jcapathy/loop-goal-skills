@@ -27,7 +27,10 @@ loop-goal-skills/
 │       └── loop_init.py         # scaffolds state files into a project folder
 ├── goal/                       # the /goal skill
 │   └── SKILL.md                # objective-mode entry point that drives the loop
+├── loop_goal_skills/           # pip package: `loop-skills` + `loop-init` CLIs
+├── pyproject.toml              # packaging (pip install from GitHub)
 ├── claude-settings.json        # optional pre-approved tool permissions (Claude Code)
+├── LICENSE                     # MIT
 └── README.md
 ```
 
@@ -72,9 +75,32 @@ blocker instead of spinning.
 
 ## Install
 
-### Claude Code (CLI)
-Copy each skill folder into your skills directory — user-level (all projects) or
-project-level (one repo):
+### pip (installer CLI) — recommended
+
+Install straight from GitHub, then run the bundled installer to copy both skills
+into your Claude skills directory:
+
+```bash
+pip install git+https://github.com/Jcapathy/loop-goal-skills.git
+
+loop-skills install             # → ~/.claude/skills/   (loop + goal, all projects)
+loop-skills install --project   # → ./.claude/skills/   (current repo only)
+```
+
+Start a new Claude Code session and invoke with `/loop` or `/goal` (they also
+auto-trigger when your wording matches their description).
+
+The package also installs **`loop-init`**, which scaffolds a project's persistent
+state from the bundled templates:
+
+```bash
+loop-init ./ParryAI --name ParryAI --mission "Prompt-injection armor for LLM apps"
+# creates ParryAI/LOOP_STATE.md and ParryAI/wiki/
+```
+
+### Manual (copy the folders)
+No pip? Copy each skill folder into your skills directory — user-level (all projects)
+or project-level (one repo):
 
 ```bash
 # user-level (available everywhere)
